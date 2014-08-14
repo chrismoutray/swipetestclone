@@ -1,0 +1,15 @@
+<ion-view title="Dashboard">
+  <ion-content class="has-header padding">
+    <h1>Dash</h1>
+    
+    <swipe-cards>
+        <swipe-card ng-repeat="card in cards" on-destroy="cardDestroyed($index)" on-card-swipe="cardSwiped($index)">
+            <div style="border: 1px solid #666;width: 300px;margin:10px;padding:10px;">
+                <p>Name {{card.name}}</p>
+                <p>Age {{card.age}}</p>
+            </div>
+        </swipe-card>
+    </swipe-cards>
+
+  </ion-content>
+</ion-view>
